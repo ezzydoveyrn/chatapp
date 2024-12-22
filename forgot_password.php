@@ -57,9 +57,9 @@
   <div class="registerForm">
     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
       <label for="email">Email</label>
-      <input type="email" name="email" id="email">
+      <input type="email" name="email" id="email" autocomplete="off" placeholder="example@gmail.com" required>
       <label for="squestion">What's your favourite teacher's name?</label>
-      <input type="text" name="squestion" id="squestion">
+      <input type="text" name="squestion" id="squestion" placeholder="your favorite teachers name" required autocomplete="off">
       <input type="submit" name="forgotPsd" value="continue" id="submit">
       <div style="font-weight: 800; color: red; font-size: 20px;">
         <?php echo $errorMsg; ?>

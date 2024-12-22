@@ -56,3 +56,17 @@ body .registerForm form .signupDirection{
   text-align: center;
   margin-top: 8px;
 }
+body .registerForm form .checkBox{
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+body .registerForm form .checkBox input{
+  width: 30px;
+  clip-path: circle(45%);
+  margin-right: 5px;
+  cursor: pointer;
+}
+body .registerForm form .checkBox label{
+  cursor: pointer;
+}

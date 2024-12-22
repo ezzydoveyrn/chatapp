@@ -1,0 +1,560 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+}
+header{
+  background-color: rgba(0, 255, 255, 0.45);
+  height: 50px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .logo{
+  width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header .logo a{
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+header .logo a:hover{
+  text-decoration: overline dotted;
+}
+header .logout form input{
+  background-color: rgb(202, 71, 71);
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+}
+
+.containerUsers{
+  width: 700px;
+  height: 70vh;
+  background-color: #f5f5f57a;
+  box-shadow: 10px 0px 10px #6fff0089, -10px 0px 10px #08cb08bc, 0px -10px 10px #00fff2b9, 0px 10px 10px #ffff00b2;
+  border-radius: 10px;
+  padding: 10px;
+}
+.containerUsers .search{
+  width: 100%;
+  height: 40px;
+  padding: 5px 20px 5px 20px;
+}
+.containerUsers .search form input{
+  width: 100%;
+  background-color: #00b7ffb6;
+  padding: 5px 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.containerUsers .search form input::placeholder{
+  color: black;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.containerUsers .users{
+  padding: 0px 0px 0px 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+  height: 90%;
+  overflow: auto;
+}
+.containerUsers .users .container{
+  background-color: aqua;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  width: 300px;
+  height: 100px;
+  margin-top: 5px;
+}
+.containerUsers .users .container .image{
+  margin-right: 5px;
+  width: 90px;
+  height: 90px;
+}
+.containerUsers .users .container .image img{
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+.containerUsers .users .container .details{
+  width: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.containerUsers .users .container .details .name{
+  font-weight: bold;
+}
+.containerUsers .users .container .details .email{
+  font-size: 10px;
+  margin-top: 4px;
+}
+.containerUsers .users .container .details form a{
+  background-color: greenyellow;
+  border-radius: 10px;
+  height: 25px;
+  padding: 2px 2px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 2px;
+  right: 10px;
+  border: 2px solid #02020292;
+  text-decoration: none;
+}
+
+body .messageS{
+  background-image: url(background.jpg);
+  width: 100%;
+  min-height: 100Vh;
+  background-position: center;
+  padding: 10px;
+  display: flex;
+}
+body .messageS .users{
+  width: 300px;
+  min-height: 96.5vh;
+  background-color: #00ffff4f;
+  border-radius: 10px 10px 10px 10px;
+  margin-right: 5px;
+  padding: 10px;
+}
+body .messageS .users .user{
+  width: 280px;
+  height: 100px;
+  display: flex;
+  background-color: aqua;
+  border-radius: 50px 20px 25px 50px;
+  padding: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+body .messageS .users .user img{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  margin-right: 5px;
+}
+body .messageS .users .user .details{
+  flex-grow: 1;
+  padding-top: 30px;
+}
+body .messageS .users .user .details .name{
+  font-weight: bold;
+}
+body .messageS .users .user .details .message{
+  margin-top: 10px;
+  background-color: rgba(128, 128, 128, 0.571);
+  padding: 5px;
+  border-radius: 10px 10px 15px 10px;
+}
+body .messageS .msCentre{
+  flex-grow: 1;
+  min-height: 96.5vh;
+  background-color: #00ffff3c;
+  border-radius: 10px 10px 10px 10px;
+  margin-right: 10px;
+  margin-left: 5px;
+  display: flex;
+}
+body .messageS .msCentre .messageForms{
+  max-width: 1000px;
+  flex-grow: 1;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+body .messageS .msCentre .messageForms .header{
+  width: 100%;
+  background-color: aqua;
+  height: 100px;
+  border-radius: 0px 0px 20px 20px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+body .messageS .msCentre .messageForms .header a{
+  display: none;
+}
+body .messageS .msCentre .messageForms .header .image{
+  width: 110px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .messageS .msCentre .messageForms .header .image img{
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+body .messageS .msCentre .messageForms .header .nameStatus{
+  p{
+    color: green;
+  }
+}
+body .messageS .msCentre .messageForms .messageBox{
+  height: 85vh;
+  padding-top: 101px;
+  width: 100%;
+  background-color: rgba(245, 245, 245, 0.308);
+  overflow-y: auto;
+}
+body .messageS .msCentre .messageForms .messageBox .sending{
+  width: 59%;
+  margin-left: 40%;
+  background-color: rgba(0, 255, 166, 0.872);
+  display: block;
+  padding: 5px;
+  border-radius: 10px 10px 0px 10px;
+  margin-right: 1%;
+  margin-top: 5px;
+}
+body .messageS .msCentre .messageForms .messageBox .incoming{
+  width: 59%;
+  margin-right: 40%;
+  background-color: rgb(4, 255, 0);
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 0px 10px 10px 10px;
+  margin-left: 1%;
+}
+body .messageS .msCentre .messageForms .formBox{
+  width: 100%;
+  flex-grow: 1;
+  border-radius: 0px 0px 10px 10px;
+  background-color: aqua;
+  padding: 10px;
+}
+body .messageS .msCentre .messageForms .formBox form{
+  display: flex;
+}
+body .messageS .msCentre .messageForms .formBox .textarea{
+  flex-grow: 1;
+}
+body .messageS .msCentre .messageForms .formBox .textarea textarea{
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+}
+body .messageS .msCentre .messageForms .formBox .input{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+body .messageS .msCentre .messageForms .formBox .input input{
+  height: 40px;
+  width: 90px;
+}
+body .messageS .msCentre .userInfo{
+  width: 350px;
+  height: 100%;
+  background-color: aqua;
+  border-radius: 20px;
+  padding: 20px;
+  margin-left: 10px;
+}
+body .messageS .msCentre .userInfo .container1{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .messageS .msCentre .userInfo .container1 img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media (max-width: 500px) {
+  .containerUsers{
+  width: 350px;
+  height: 70vh;
+  background-color: #f5f5f57a;
+  box-shadow: 10px 0px 10px #6fff0089, -10px 0px 10px #08cb08bc, 0px -10px 10px #00fff2b9, 0px 10px 10px #ffff00b2;
+  border-radius: 10px;
+  padding: 10px;
+  }
+  .containerUsers .search{
+    width: 100%;
+    height: 40px;
+    padding: 5px 20px 5px 20px;
+  }
+  .containerUsers .search form input{
+    width: 100%;
+    background-color: #00b7ffb6;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+  .containerUsers .search form input::placeholder{
+    color: black;
+    letter-spacing: 3px;
+    font-weight: bold;
+  }
+  .containerUsers .users{
+    padding: 0px 0px 0px 20px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 5px;
+    height: 90%;
+    overflow: auto;
+  }
+  .containerUsers .users .container{
+    background-color: aqua;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    width: 300px;
+    height: 100px;
+    margin-top: 5px;
+  }
+  .containerUsers .users .container .image{
+    margin-right: 5px;
+    width: 90px;
+    height: 90px;
+  }
+  .containerUsers .users .container .image img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+  }
+  .containerUsers .users .container .details{
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+  .containerUsers .users .container .details .name{
+    font-weight: bold;
+  }
+  .containerUsers .users .container .details .email{
+    font-size: 10px;
+    margin-top: 4px;
+  }
+  .containerUsers .users .container .details form a{
+    background-color: greenyellow;
+    border-radius: 10px;
+    height: 25px;
+    padding: 2px 2px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2px;
+    right: 10px;
+    border: 2px solid #02020292;
+    text-decoration: none;
+  }
+  /********* Messages ************/
+  body .messageS{
+  background-image: url(background.jpg);
+  width: 100%;
+  min-height: 100Vh;
+  background-position: center;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  }
+  body .messageS .users{
+    width: 300px;
+    min-height: 96.5vh;
+    background-color: #00ffff4f;
+    border-radius: 10px 10px 10px 10px;
+    margin-right: 5px;
+    padding: 10px;
+    display: none;
+  }
+  body .messageS .users .user{
+    width: 280px;
+    height: 100px;
+    display: flex;
+    background-color: aqua;
+    border-radius: 50px 20px 25px 50px;
+    padding: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  body .messageS .users .user img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    margin-right: 5px;
+  }
+  body .messageS .users .user .details{
+    flex-grow: 1;
+    padding-top: 30px;
+  }
+  body .messageS .users .user .details .name{
+    font-weight: bold;
+  }
+  body .messageS .users .user .details .message{
+    margin-top: 10px;
+    background-color: rgba(128, 128, 128, 0.571);
+    padding: 5px;
+    border-radius: 10px 10px 15px 10px;
+  }
+  body .messageS .msCentre{
+    flex-grow: 1;
+    min-height: 96.5vh;
+    background-color: #00ffff3c;
+    border-radius: 10px 10px 10px 10px;
+    margin-right: 10px;
+    margin-left: 5px;
+    display: flex;
+  }
+  body .messageS .msCentre .messageForms{
+    max-width: 1000px;
+    flex-grow: 1;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  body .messageS .msCentre .messageForms .header{
+    width: 100%;
+    background-color: aqua;
+    height: 100px;
+    border-radius: 0px 0px 20px 20px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+  }
+  body .messageS .msCentre .messageForms .header a{
+    display: block;
+    position: absolute;
+    right: 5px;
+  }
+  body .messageS .msCentre .messageForms .header .image{
+    width: 110px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .messageS .msCentre .messageForms .header .image img{
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+  }
+  body .messageS .msCentre .messageForms .header .nameStatus{
+    p{
+      color: green;
+    }
+  }
+  body .messageS .msCentre .messageForms .messageBox{
+    height: 85vh;
+    padding-top: 101px;
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.308);
+    overflow-y: auto;
+  }
+  body .messageS .msCentre .messageForms .messageBox .sending{
+    width: 59%;
+    margin-left: 40%;
+    background-color: rgba(0, 255, 166, 0.872);
+    display: block;
+    padding: 5px;
+    border-radius: 10px 10px 0px 10px;
+    margin-right: 1%;
+    margin-top: 5px;
+  }
+  body .messageS .msCentre .messageForms .messageBox .incoming{
+    width: 59%;
+    margin-right: 40%;
+    background-color: rgb(4, 255, 0);
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 0px 10px 10px 10px;
+    margin-left: 1%;
+  }
+  body .messageS .msCentre .messageForms .formBox{
+    width: 100%;
+    flex-grow: 1;
+    border-radius: 0px 0px 10px 10px;
+    background-color: aqua;
+    padding: 10px;
+  }
+  body .messageS .msCentre .messageForms .formBox form{
+    display: flex;
+  }
+  body .messageS .msCentre .messageForms .formBox .textarea{
+    flex-grow: 1;
+  }
+  body .messageS .msCentre .messageForms .formBox .textarea textarea{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+  }
+  body .messageS .msCentre .messageForms .formBox .input{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  body .messageS .msCentre .messageForms .formBox .input input{
+    height: 40px;
+    width: 90px;
+  }
+  body .messageS .msCentre .userInfo{
+    width: 350px;
+    height: 100%;
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: 10px;
+    display: none;
+  }
+  body .messageS .msCentre .userInfo .container1{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .messageS .msCentre .userInfo .container1 img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+  }
+}

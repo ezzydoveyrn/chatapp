@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2024 at 05:57 AM
+-- Generation Time: Dec 22, 2024 at 11:30 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,6 +24,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `sender` varchar(255) NOT NULL,
+  `receiver` varchar(255) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `time` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -33,19 +46,20 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `phone_number` int(11) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `security_question` varchar(255) NOT NULL
+  `security_question` varchar(255) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `phone_number`, `password`, `security_question`) VALUES
-(1, 'Ezekiel Mokaya Ogana', 'ezekielmokayaogana@gmail.com', 702491550, '$2y$10$bEOBGcOwukoteDEzysixAufrfHfodS6ohA.dacvvv0yaCkWznrt6i', '$2y$10$oHu/3mEtsFTYPkBbzX6xD.XGftsYUd6mL/TdPWtUonZFuYVUStFSe');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD UNIQUE KEY `time` (`time`);
 
 --
 -- Indexes for table `users`
@@ -62,7 +76,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

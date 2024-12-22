@@ -1,5 +1,10 @@
 <?php
   session_start();
+  $email = $_SESSION["usermail"];
+
+  if(empty($email)){
+    header("Location: forgot_password.php?you have to check your fields first");
+  }
 ?>
 <?php require_once("dbconn.php"); ?>
 
@@ -21,7 +26,6 @@
 
       if($password === $cpassword){
         $passwordhashed = password_hash("$password", PASSWORD_DEFAULT);
-        $email = $_SESSION["usermail"];
         $sql = "UPDATE users SET password='$passwordhashed' WHERE email='$email'";
         mysqli_query($conn, $sql);
         header("Location: login.php?psd_up=password changed successfully");
@@ -50,9 +54,9 @@
   <div class="registerForm">
     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
       <label for="password">New Password</label>
-      <input type="password" name="password" id="password" autocomplete="off" required>
+      <input type="password" name="password" id="password" autocomplete="off"  placeholder="********">
       <label for="cpassword">Confirm Password</label>
-      <input type="password" name="cpassword" id="cpassword" autocomplete="off" required>
+      <input type="password" name="cpassword" id="cpassword" autocomplete="off" required placeholder="********">
       <input type="submit" name="updatePassword" value="UPDATE" id="submit">
       <div style="font-weight: 800; color: red; font-size: 20px;">
         <?php echo $errorMsg; ?>

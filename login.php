@@ -27,6 +27,8 @@
         $dbNames = $row["name"];
         if(password_verify("$password", $hashedPSD)){
           $_SESSION["usermail"] = "$email";
+          $update = "UPDATE users SET status='online' WHERE email='$email'";
+          mysqli_query($conn, $update);
           header("Location: home.php?suc_msg=welcome $dbNames");
         }
         else{
@@ -60,9 +62,12 @@
   <div class="registerForm">
     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
       <label for="email">Email</label>
-      <input type="email" name="email" id="email" autocomplete="off" required>
+      <input type="email" name="email" id="email" autocomplete="off" required placeholder="example@gmail.com">
       <label for="password">Password</label>
-      <input type="password" name="password" id="password" autocomplete="off" required>
+      <input type="password" name="password" id="password" autocomplete="off" required placeholder="**********">
+      <div class="checkBox">
+        <input type="checkbox" name="rememberMe" id="checkbox"><label for="checkbox">Remember Me</label>
+      </div>
       <input type="submit" name="login" value="Login" id="submit">
       <div style="font-weight: 800; color: red; font-size: 20px;">
         <?php echo $errorMsg; ?>
